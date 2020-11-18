@@ -15,9 +15,12 @@ class ProjectInput {
       true
     );
     this.element = importedNode.firstElementChild as HTMLFormElement;
+    this.element.id = "user-input";
     this.attach();
   }
   private attach() {
     this.hostElement.insertAdjacentElement("afterbegin", this.element);
   }
 }
+
+const projInput = new ProjectInput();
